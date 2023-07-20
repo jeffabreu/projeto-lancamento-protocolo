@@ -1,0 +1,30 @@
+<nav class="barra-nav">
+   <div class="user-info" (click)="toggleCard()">
+    <ng-container  *ngIf="user.avatarUrl; else defaultAvatar">
+        <img src="{{ user.avatarUrl }}" alt="User Avatar">
+      </ng-container>
+      
+      <ng-template #defaultAvatar style >
+        <img src="https://img.freepik.com/free-icon/user_318-644325.jpg?w=2000" alt="Default Avatar">
+      </ng-template>
+      <h3>{{user.name}}</h3>
+     
+    </div>
+      <button mat-fab extended style="background-color: #664520;">
+        <mat-icon>add</mat-icon>
+        Novo Protocolo
+      </button>
+      <div class="tools-group">
+        <a><mat-icon>inbox</mat-icon></a>
+        <a><mat-icon>create_new_folder</mat-icon></a>
+      <a ><mat-icon >search</mat-icon></a>
+    </div>
+    <div class="notification-group">
+      <mat-icon class="notifications-icon">volume_down</mat-icon>
+      <mat-icon class="notifications-icon" *ngIf="notativa; else notdesligada" (click)="notstatus()">notifications</mat-icon>
+      <ng-template #notdesligada>
+      <mat-icon class="notifications-icon" (click)="notstatus()">notifications_off</mat-icon></ng-template>
+      <mat-icon class="notifications-icon">security</mat-icon>
+    </div>
+    <img class="petrobras-logo" src="https://marca.petrobras.com.br/data/files/49/E0/DD/B0/2B86F3102F333DE3FAA2D9A8/Principal_h_cor_RGB.gif" alt="Default Avatar">
+</nav>

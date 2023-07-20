@@ -1,0 +1,57 @@
+nav {
+    display: flex;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    height: 50px;
+    border-bottom: solid #664520;
+    padding: 3px;
+    
+   align-items: center;
+   position: relative;
+   }
+
+
+h3 {
+    margin-top: 15px ;
+    margin-left: 10px;
+}
+button {
+    box-shadow: none;
+    
+    height: 35px;
+    margin-left: auto; /*botão vai para o maximo do lado direito*/
+    margin-right: 10px;
+   
+}
+
+/*Classes*/
+.user-info {
+    display: flex;
+    cursor: pointer;
+}
+.user-info img {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    margin: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+.tools-group, .notification-group{
+
+    border-right: solid black;
+    padding-right: 10px;
+}
+.tools-group a, .notifications-icon {
+    margin-left: 10px;
+    
+}
+
+.tools-group a:hover {
+    border-bottom: 3px solid #664520;
+}
+.petrobras-logo {
+    height: 30px;
+}

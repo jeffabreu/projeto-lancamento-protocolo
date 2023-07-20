@@ -1,0 +1,68 @@
+<div class="container">
+    <div class="head">
+    <h2>PETR-2023-00000295 v0.9</h2>
+
+    <form class="selection-button" dir="rtl">
+      <mat-select [(value)]="selectedNatureza" matNativeControl required>
+        <mat-option value="Interno">Interno</mat-option>
+        <mat-option value="Externo">Externo</mat-option>
+
+      </mat-select>
+    </form>
+ 
+    </div>
+
+    <div class="forms">
+    <div class="row">
+    <mat-form-field class="mat-form" appearance="outline">
+        <mat-label>Natureza do Documento</mat-label>
+        <input matInput placeholder="Placeholder" [value]="selectedNatureza" disabled>
+      </mat-form-field>
+    
+      <mat-form-field class="mat-form" appearance="outline">
+        <mat-label>Origem do Documento</mat-label>
+        <input matInput placeholder="Placeholder">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="mat-form" appearance="outline">
+        <mat-select placeholder="">
+            
+            <mat-option>-- None --</mat-option>
+            <mat-option value="option">Option</mat-option>
+            
+        </mat-select>
+        <mat-label>Tipo de Documento</mat-label>
+      </mat-form-field>
+      <mat-form-field class="mat-form" appearance="outline">
+        <mat-label>Documento Original</mat-label>
+        <input matInput placeholder="Placeholder">
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="mat-form" appearance="outline">
+        <mat-label>Destino do Documento</mat-label>
+        <input matInput placeholder="Placeholder">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="mat-form" appearance="outline">
+        <mat-label>Assunto</mat-label>
+        <input matInput placeholder="Placeholder">
+      </mat-form-field>
+    </div>
+    <div class="NgxEditor__Wrapper">
+      <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+      <ngx-editor [editor]="editor" [ngModel]="html" [disabled]="false" [placeholder]="'Type here...'"></ngx-editor>
+    </div>
+  </div>
+  
+</div>
+<app-acoes-proto></app-acoes-proto>
+<app-central-acoes></app-central-acoes>

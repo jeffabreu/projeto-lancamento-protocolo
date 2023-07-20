@@ -1,0 +1,29 @@
+<div class="central-acoes">
+    
+    <div class="accordion">
+        <p class="title">Central de Ações</p>
+        <div class="accordion-item">
+          <div class="accordion-header" (click)="toggleAccordionItem(1)">
+            <p>
+            Maestro
+            <mat-icon class="icon">{{ isItemVisible(1) ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon></p>
+          </div>
+          <div class="accordion-content" [ngClass]="{'show': isItemVisible(1)}">
+            Content for Accordion Item 1
+          </div>
+        </div>
+      
+        <div class="accordion-item">
+          <div class="accordion-header" (click)="toggleAccordionItem(2)">
+           <p>
+            AGUP - teste
+            <mat-icon class="icon">{{ isItemVisible(2) ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon></p>
+          </div>
+          <div class="accordion-content" [ngClass]="{'show': isItemVisible(2)}">
+            Content for Accordion Item 2
+          </div>
+        </div>
+      
+        <!-- Add more accordion items as needed -->
+      </div>
+</div>

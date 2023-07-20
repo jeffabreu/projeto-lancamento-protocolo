@@ -1,0 +1,45 @@
+.acoes-painel {
+
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    z-index: 2;
+    top: 58px;
+    left: 1120px;
+    
+}
+.botoes-acoes {
+    margin: 10px;
+    display: flex;
+    margin-left: auto;
+    margin-right: 10px;
+    
+}
+.botoes-acoes button{
+    margin-left: auto;
+    box-shadow: none;
+    height: 40px;
+    margin-left: 10px;
+}
+.selection-button {
+    margin: 10px;
+    display: flex;
+    gap: 5px;
+    width: 130px;
+    padding: 8px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-top: 10px;
+}
+.painel {
+    background-color: #f0e0c7;
+    height: 500px;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+}
+.tab:hover {
+ background-color: none;
+}

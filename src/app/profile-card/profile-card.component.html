@@ -1,0 +1,70 @@
+<mat-card class="avatar-card-back" *ngIf="exibir">
+    <div class="avatar-card-header">
+        <mat-card-header>
+                <div mat-card-avatar class="avatar" [style.background-image]="'Url(' +(userAvatar.avatarUrl) + ')'">   
+                </div>
+                <mat-card-title class="avatar-header-name">{{userAvatar.name}}</mat-card-title>
+                <mat-card-subtitle class="avatar-header-email">{{userAvatar.email}}</mat-card-subtitle>
+        </mat-card-header>
+    
+        <mat-card-content class="metrics">
+            <div class="grid">
+                <div class="col">
+                    <p>Publicados</p>
+                    <span class="number-metrics">{{avatarData.publicDocs.length}}</span>
+                </div>
+                <div class="col">
+                    <p>Em Elaboração</p>
+                    <span class="number-metrics">{{avatarData.ongoingDocs.length}}</span>
+                </div>
+                <div class="col">
+                    <p>Encaminhamentos</p>
+                    <span class="number-metrics">{{avatarData.encaminhamentoDocs.length}}</span>
+                </div>
+                <div class="col">
+                    <p>Sol.Respostas</p>
+                    <span class="number-metrics">{{avatarData.answerDocs.length}}</span>
+                </div>
+            </div>
+        </mat-card-content>
+    </div>
+    <div class="associados-soc">
+        <mat-card-content >    
+            <div class="sociedades">
+                <h3>Sociedades Associadas</h3>
+                    <mat-chip class="chips" *ngFor="let soc of userAvatar.sociedades">
+                       {{soc}}
+                    </mat-chip>
+            </div> 
+        </mat-card-content>
+        </div>
+    <div class="associados-per">
+        <mat-card-content>
+            <div class="perfis">
+                <h3>Perfis Associados</h3>
+                <mat-chip class="chips" *ngFor="let soc of userAvatar.perfis">
+                    {{soc}}
+                 </mat-chip>
+            </div>
+        </mat-card-content>
+   </div>
+        
+    
+        <mat-card-actions>
+            <div class="actions">
+            <a href="#"><mat-icon class="action-icon">group</mat-icon>   Consulte suas equipes</a>
+            <a href="#"><mat-icon class="action-icon">toggle_off</mat-icon>   Configure suas notificações</a>
+            <a href="#"><mat-icon class="action-icon">school</mat-icon>   Aprenda com o tutorial</a>
+            <a href="#"><mat-icon class="action-icon">headset_mic</mat-icon> Fale com a gente</a>
+            
+            </div>
+            
+        </mat-card-actions>
+        <mat-divider class="divider"></mat-divider>
+        <mat-card-actions>
+            <div class="actions">
+            <a href="#"><mat-icon class="action-icon">exit_to_app</mat-icon>Sair</a></div>
+        </mat-card-actions>
+        
+    
+</mat-card>
