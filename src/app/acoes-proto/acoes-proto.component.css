@@ -1,7 +1,7 @@
 .acoes-painel {
 
     width: 350px;
-    height: 500px;
+    height: 550px;
     position: absolute;
     z-index: 2;
     top: 58px;
@@ -36,7 +36,7 @@
 }
 .painel {
     background-color: #f0e0c7;
-    height: 500px;
+    height: 100%;
     padding: 20px;
     border-radius: 15px 15px 0 0;
 }
